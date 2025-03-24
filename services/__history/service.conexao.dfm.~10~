@@ -1,0 +1,128 @@
+object ServiceConexao: TServiceConexao
+  Height = 686
+  Width = 174
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=C:\Users\EMANUEL\Desktop\banco\BANCOFDDS.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
+    Left = 72
+    Top = 72
+  end
+  object FDQuery_CadastrarLivros: TFDQuery
+    Active = True
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from livros')
+    Left = 72
+    Top = 256
+    object FDQuery_CadastrarLivrosLIV_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'LIV_CODIGO'
+      Origin = 'LIV_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery_CadastrarLivrosLIV_TITULO: TStringField
+      FieldName = 'LIV_TITULO'
+      Origin = 'LIV_TITULO'
+      Size = 255
+    end
+    object FDQuery_CadastrarLivrosLIV_AUTOR: TStringField
+      FieldName = 'LIV_AUTOR'
+      Origin = 'LIV_AUTOR'
+      Size = 255
+    end
+    object FDQuery_CadastrarLivrosLIV_ANO_PUBLICACAO: TIntegerField
+      FieldName = 'LIV_ANO_PUBLICACAO'
+      Origin = 'LIV_ANO_PUBLICACAO'
+    end
+    object FDQuery_CadastrarLivrosLIV_STATUS: TStringField
+      FieldName = 'LIV_STATUS'
+      Origin = 'LIV_STATUS'
+      Size = 10
+    end
+  end
+  object FDQuery_CadastrarClientes: TFDQuery
+    Active = True
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from pessoas')
+    Left = 72
+    Top = 184
+    object FDQuery_CadastrarClientesPES_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'PES_CODIGO'
+      Origin = 'PES_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery_CadastrarClientesPES_NOMECOMPLETO: TStringField
+      FieldName = 'PES_NOMECOMPLETO'
+      Origin = 'PES_NOMECOMPLETO'
+      Size = 200
+    end
+    object FDQuery_CadastrarClientesPES_TELEFONE: TStringField
+      FieldName = 'PES_TELEFONE'
+      Origin = 'PES_TELEFONE'
+      Size = 50
+    end
+    object FDQuery_CadastrarClientesPES_EMAIL: TStringField
+      FieldName = 'PES_EMAIL'
+      Origin = 'PES_EMAIL'
+      Size = 200
+    end
+  end
+  object FDQuery_Emprestimos: TFDQuery
+    Active = True
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from emprestimos')
+    Left = 72
+    Top = 328
+    object FDQuery_EmprestimosEMP_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'EMP_CODIGO'
+      Origin = 'EMP_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery_EmprestimosEMP_CLIENTE: TIntegerField
+      FieldName = 'EMP_CLIENTE'
+      Origin = 'EMP_CLIENTE'
+    end
+    object FDQuery_EmprestimosEMP_LIVRO: TIntegerField
+      FieldName = 'EMP_LIVRO'
+      Origin = 'EMP_LIVRO'
+    end
+    object FDQuery_EmprestimosEMP_DATA_EMPRESTIMO: TDateField
+      FieldName = 'EMP_DATA_EMPRESTIMO'
+      Origin = 'EMP_DATA_EMPRESTIMO'
+    end
+  end
+  object FDQuery_Login: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from login')
+    Left = 72
+    Top = 400
+    object FDQuery_LoginLOG_CODIGO: TIntegerField
+      FieldName = 'LOG_CODIGO'
+      Origin = 'LOG_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery_LoginLOG_USUARIO: TStringField
+      FieldName = 'LOG_USUARIO'
+      Origin = 'LOG_USUARIO'
+      Size = 50
+    end
+    object FDQuery_LoginLOG_SENHA: TStringField
+      FieldName = 'LOG_SENHA'
+      Origin = 'LOG_SENHA'
+      Size = 50
+    end
+  end
+end

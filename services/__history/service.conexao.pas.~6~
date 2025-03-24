@@ -1,0 +1,47 @@
+unit service.conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TServiceConexao = class(TDataModule)
+    FDConnection: TFDConnection;
+    FDQuery_CadastrarLivros: TFDQuery;
+    FDQuery_CadastrarLivrosLIV_CODIGO: TIntegerField;
+    FDQuery_CadastrarLivrosLIV_TITULO: TStringField;
+    FDQuery_CadastrarLivrosLIV_AUTOR: TStringField;
+    FDQuery_CadastrarLivrosLIV_ANO_PUBLICACAO: TIntegerField;
+    FDQuery_CadastrarLivrosLIV_STATUS: TStringField;
+    FDQuery_CadastrarClientes: TFDQuery;
+    FDQuery_CadastrarClientesPES_CODIGO: TIntegerField;
+    FDQuery_CadastrarClientesPES_NOMECOMPLETO: TStringField;
+    FDQuery_CadastrarClientesPES_TELEFONE: TStringField;
+    FDQuery_CadastrarClientesPES_EMAIL: TStringField;
+    FDQuery_emprestimos: TFDQuery;
+    FDQuery_emprestimosEMP_CODIGO: TIntegerField;
+    FDQuery_emprestimosEMP_CLIENTE: TIntegerField;
+    FDQuery_emprestimosEMP_LIVRO: TIntegerField;
+    FDQuery_emprestimosEMP_DATA_EMPRESTIMO: TDateField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServiceConexao: TServiceConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

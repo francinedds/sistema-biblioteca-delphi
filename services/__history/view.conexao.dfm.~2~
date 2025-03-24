@@ -1,0 +1,47 @@
+object DataModule1: TDataModule1
+  Height = 686
+  Width = 174
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=C:\Users\EMANUEL\Desktop\banco\BANCOFDDS.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
+    Left = 72
+    Top = 72
+  end
+  object FDQuery: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      'select * from livros')
+    Left = 72
+    Top = 136
+    object FDQueryLIV_CODIGO: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'LIV_CODIGO'
+      Origin = 'LIV_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQueryLIV_TITULO: TStringField
+      FieldName = 'LIV_TITULO'
+      Origin = 'LIV_TITULO'
+      Size = 255
+    end
+    object FDQueryLIV_AUTOR: TStringField
+      FieldName = 'LIV_AUTOR'
+      Origin = 'LIV_AUTOR'
+      Size = 255
+    end
+    object FDQueryLIV_ANO_PUBLICACAO: TIntegerField
+      FieldName = 'LIV_ANO_PUBLICACAO'
+      Origin = 'LIV_ANO_PUBLICACAO'
+    end
+    object FDQueryLIV_STATUS: TStringField
+      FieldName = 'LIV_STATUS'
+      Origin = 'LIV_STATUS'
+      Size = 10
+    end
+  end
+end
