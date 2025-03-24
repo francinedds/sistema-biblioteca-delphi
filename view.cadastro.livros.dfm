@@ -1,0 +1,247 @@
+object ViewCadastroLivros: TViewCadastroLivros
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'CadastroLivros'
+  ClientHeight = 343
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poDefault
+  TextHeight = 15
+  object pnlHeader: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 2
+    Width = 636
+    Height = 25
+    Cursor = crHandPoint
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 0
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 4148859
+    ParentBackground = False
+    TabOrder = 0
+    OnMouseDown = pnlHeaderMouseDown
+    object btnClose: TSpeedButton
+      Left = 611
+      Top = 0
+      Width = 25
+      Height = 25
+      Cursor = crHandPoint
+      Align = alRight
+      Caption = #10006
+      Flat = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      OnClick = btnCloseClick
+      ExplicitLeft = 331
+      ExplicitTop = -2
+      ExplicitHeight = 27
+    end
+  end
+  object pnlFooter: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 324
+    Width = 636
+    Height = 17
+    Margins.Left = 2
+    Margins.Top = 0
+    Margins.Right = 2
+    Margins.Bottom = 2
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = 4148859
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object pnlTitle: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 27
+    Width = 636
+    Height = 72
+    Margins.Left = 2
+    Margins.Top = 0
+    Margins.Right = 2
+    Margins.Bottom = 0
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 4148859
+    ParentBackground = False
+    TabOrder = 2
+    object lblTitle: TLabel
+      Left = 0
+      Top = 0
+      Width = 636
+      Height = 72
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'Cadastro de Livros'
+      Color = 4149117
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitWidth = 114
+      ExplicitHeight = 14
+    end
+  end
+  object pnlContent: TPanel
+    AlignWithMargins = True
+    Left = 2
+    Top = 101
+    Width = 636
+    Height = 223
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 0
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 11061214
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 3
+    object lblTitulo: TLabel
+      Left = 56
+      Top = 32
+      Width = 35
+      Height = 14
+      Caption = 'T'#237'tulo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblAutor: TLabel
+      Left = 56
+      Top = 82
+      Width = 36
+      Height = 14
+      Caption = 'Autor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblAno: TLabel
+      Left = 56
+      Top = 132
+      Width = 25
+      Height = 14
+      Caption = 'Ano'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblStatus: TLabel
+      Left = 433
+      Top = 19
+      Width = 41
+      Height = 14
+      Caption = 'Status'
+      Color = 11127007
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtTitulo: TEdit
+      Left = 56
+      Top = 53
+      Width = 521
+      Height = 22
+      BorderStyle = bsNone
+      TabOrder = 0
+    end
+    object edtAutor: TEdit
+      Left = 56
+      Top = 103
+      Width = 521
+      Height = 22
+      BorderStyle = bsNone
+      TabOrder = 1
+    end
+    object edtAno: TEdit
+      Left = 56
+      Top = 153
+      Width = 73
+      Height = 22
+      BorderStyle = bsNone
+      TabOrder = 2
+    end
+    object pnlBtnSalvar: TPanel
+      Left = 480
+      Top = 176
+      Width = 145
+      Height = 33
+      BevelOuter = bvNone
+      Color = 4149117
+      ParentBackground = False
+      TabOrder = 3
+      object btnSalvar: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 145
+        Height = 33
+        Cursor = crHandPoint
+        Align = alClient
+        Caption = 'Salvar'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnSalvarClick
+        ExplicitLeft = 80
+        ExplicitWidth = 23
+        ExplicitHeight = 22
+      end
+    end
+    object ComboBox: TComboBox
+      Left = 480
+      Top = 16
+      Width = 97
+      Height = 22
+      TabOrder = 4
+      Text = 'Selecionar'
+      Items.Strings = (
+        'Dispon'#237'vel'
+        'Emprestado')
+    end
+  end
+end
